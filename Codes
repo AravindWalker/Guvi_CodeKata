@@ -1,6 +1,6 @@
 # file was created
 
-Ques : You are given a number with duplicate digits your task is to remove the immediate duplicate digits and print the result
+Ques 1: You are given a number with duplicate digits your task is to remove the immediate duplicate digits and print the result
 
 a=list(input())
 b=a.copy()
@@ -14,3 +14,25 @@ for i in range(len(a)-1):
     else:
         j=0
 print(*b)
+
+Ques 2: Print the all the words that are left in the string 's' so that the words in the output sentence have distinct words compared to their adjacent words. Print -1 if no words are left
+
+a=list(input().split())
+if len(a)!=len(set(a)):
+    for i in range(len(a)):
+        if len(a)!=len(set(a)):
+            b=a.copy()
+            j=0
+            for i in range(len(a)-1):
+                if a[i]==a[i+1] and j!=1:
+                    b.remove(a[i])
+                    b.remove(a[i])
+                    j=1
+                else:
+                    j=0
+            a=b.copy()
+        else:
+            break
+    print(*b)
+else:
+    print(*a)
